@@ -21,18 +21,11 @@ export TOTAL_MEM_MB_Q1=`expr $TOTAL_MEM_MB / 4`
 export DRUID_OVERLORD_Xmx=${DRUID_OVERLORD_Xmx:-$TOTAL_MEM_MB_Q1}
 export DRUID_OVERLORD_Xms=${DRUID_OVERLORD_Xms:-$TOTAL_MEM_MB_Q1}
 
+export DRUID_MIDDLEMANAGER_Xmx=${DRUID_MIDDLEMANAGER_Xmx:-64}
+export DRUID_MIDDLEMANAGER_Xms=${DRUID_MIDDLEMANAGER_Xms:-64}
 
-druid.host=#{IP_ADDR}
-druid.port=8080
-druid.service=druid/overlord
+export DRUID_INDEXER_LOGS_S3_BUCKET=${DRUID_INDEXER_LOGS_S3_BUCKET:-druid}
+export DRUID_INDEXER_LOGS_S3_PREFIX=${DRUID_INDEXER_LOGS_S3_PREFIX:-prod/logs/v1}
 
-# Only required if you are autoscaling middle managers
 
-# Upload all task logs to deep storage
 
-# Run in remote mode
-druid.indexer.runner.type=remote
-druid.indexer.runner.minWorkerVersion=#{WORKER_VERSION}
-
-# Store all task state in the metadata storage
-druid.indexer.storage.type=metadata
