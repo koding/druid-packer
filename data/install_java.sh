@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o errexit
+
 YUM="yum --assumeyes"
 
 $YUM update
