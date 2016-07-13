@@ -5,9 +5,9 @@
 export TOTAL_MEM__KB=`cat /proc/meminfo | grep MemTotal | awk '{ print $2 }'`
 export TOTAL_MEM_MB=`expr $TOTAL_MEM__KB / 1024`
 export TOTAL_MEM_MB_Q1=`expr $TOTAL_MEM_MB / 4`
-export TOTAL_MEM_MB_Q1_STR=${TOTAL_MEM_MB_Q1_STR}m
+export TOTAL_MEM_MB_Q1_STR=${TOTAL_MEM_MB_Q1}m
 export TOTAL_MEM_MB_Q2=`expr $TOTAL_MEM_MB / 2`
-export TOTAL_MEM_MB_Q2_STR=${TOTAL_MEM_MB_Q2_STR}m
+export TOTAL_MEM_MB_Q2_STR=${TOTAL_MEM_MB_Q2}m
 export TOTAL_MEM_MB_10=`expr $TOTAL_MEM_MB / 10`
 export TOTAL_MEM_MB_10_STR=${TOTAL_MEM_MB_10}m
 export TOTAL_MEM_MB_20=`expr $TOTAL_MEM_MB / 20`
@@ -40,7 +40,7 @@ export AWS_ACCESS_KEY=${AWS_ACCESS_KEY:-diurd}
 export AWS_SECRET_KEY=${AWS_SECRET_KEY:-diurd}
 
 # JAVA CONFIG
-export ENV_JAVA_IO_TMP_DIR=${ENV_JAVA_IO_TMP_DIR:-/tmp}
+export JAVA_IO_TMP_DIR=${JAVA_IO_TMP_DIR:-/tmp}
 
 
 # DRUID CONFIG
