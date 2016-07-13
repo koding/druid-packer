@@ -56,6 +56,7 @@
         "sudo /tmp/data/install_druid.sh",
         "sudo mv /tmp/data/supervisord.init /etc/rc.d/init.d/supervisord",
         "sudo mv /tmp/data/supervisord.conf /etc/supervisord.conf",
+        "sudo mv /tmp/data/env.sh /etc/sysconfig/supervisord",
         "sudo chmod +x /etc/rc.d/init.d/supervisord",
         "sudo chkconfig --add supervisord",
         "rm -rf /tmp/data"

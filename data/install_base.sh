@@ -45,3 +45,4 @@ pip install --upgrade pip
 pip install supervisor==3.2.0
 
 mkdir -p /var/log/supervisord/
+mkdir -p /etc/sysconfig/
