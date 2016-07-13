@@ -52,7 +52,7 @@
     {
       "type": "shell",
       "inline": [
-        "sudo /tmp/data/install_java.sh",
+        "sudo /tmp/data/install_base.sh",
         "sudo /tmp/data/install_druid.sh",
         "rm -rf /tmp/data"
       ]

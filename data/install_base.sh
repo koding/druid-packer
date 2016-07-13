@@ -36,3 +36,12 @@ echo "export JAVA_HOME=/usr/java/latest" > /etc/profile.d/java.sh
 # on the other hand /etc/profile.d/eb_envvars.sh uses /usr/java/latest as
 # JAVA_HOME if directory is present
 source /etc/profile
+
+$YUM install python26-pip || echo python26-pip installed
+$YUM install python-pip || echo python-pip installed
+$YUM install python-devel || echo python-devel installed
+
+pip install --upgrade pip
+pip install supervisor==3.2.0
+
+mkdir -p /var/log/supervisord/
