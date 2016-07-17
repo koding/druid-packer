@@ -24,6 +24,7 @@
       "region": "{{user `region`}}",
       "instance_type": "{{user `instance_type`}}",
       "ssh_username": "ec2-user",
+      "associate_public_ip_address": true,
       "ami_block_device_mappings": [
         {
           "device_name": "/dev/xvdf",
